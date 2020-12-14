@@ -1,16 +1,28 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-import { LightMaker } from "./component/LightMaker";
+import { LightMaker } from "./component/home";
 
 //include bootstrap npm library into the bundle
 import "bootstrap";
 
 //include your index.scss file into the bundle
 import "../styles/index.scss";
-
-//import your own components
-import { Home } from "./component/home.js";
+let clickedLight = "";
+const timerCount = () => {
+	if (clickedLight == "red") {
+		clickedLight = "green";
+	} else if (clickedLight == "green") {
+		clickedLight = "yellow";
+	} else {
+		clickedLight = "red";
+	}
+	ReactDOM.render(
+		<LightMaker clickedLight={clickedLight} />,
+		document.querySelector("#app")
+	);
+};
 
 //render your react application
-ReactDOM.render(<LightMaker />, document.querySelector("#app"));
+
+setInterval(timerCount, 1000);

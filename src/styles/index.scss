@@ -11,6 +11,10 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background: rgb(4,175,255);
+    background: linear-gradient(0deg, rgba(4,175,255,1) 0%, rgba(6,130,189,1) 100%);
+}
 .lightBody{
     padding: 5px;
     background: black;
@@ -77,4 +81,10 @@
     margin:auto;
     
 
+}
+.ground {
+    width:100%;
+    height:300px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(60,238,2,1) 84%);
 }

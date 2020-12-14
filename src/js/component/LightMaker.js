@@ -11,22 +11,25 @@ export const LightMaker = () => {
 	if (clickedLight == "green") turnOnGreen = "lightOnGreen";
 	return (
 		<div>
-			<div className="lightBody">
-				<div
-					className={"rounded-circle redLight " + turnOnRed}
-					onClick={() => setClickedLight("red")}
-				/>
-				<div
-					className={"rounded-circle yellowLight " + turnOnYellow}
-					onClick={() => setClickedLight("yellow")}
-				/>
-				<div
-					className={"rounded-circle greenLight " + turnOnGreen}
-					onClick={() => setClickedLight("green")}
-				/>
+			<div className="sky">
+				<div className="lightBody">
+					<div
+						className={"rounded-circle redLight " + turnOnRed}
+						onClick={() => setClickedLight("red")}
+					/>
+					<div
+						className={"rounded-circle yellowLight " + turnOnYellow}
+						onClick={() => setClickedLight("yellow")}
+					/>
+					<div
+						className={"rounded-circle greenLight " + turnOnGreen}
+						onClick={() => setClickedLight("green")}
+					/>
+				</div>
+				<div className="lightPole" />
+				<div className="lightBase" />
+				<div className="ground" />
 			</div>
-			<div className="lightPole" />
-			<div className="lightBase" />
 		</div>
 	);
 };
